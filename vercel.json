@@ -11,5 +11,25 @@
       "src": "/(.*)",
       "dest": "main.py"
     }
+  ],
+  "functions": {
+    "api/webhook.py": {
+      "runtime": "python3.9",
+      "handler": "main.handler",
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "TOKEN": "7885324267:AAHFISc1gkB7BCLXllYhFNG3bZIUeU9g4a0"
+  },
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python",
+      "config": {
+        "installCommand": "pip install -r requirements.txt"
+      }
+    }
   ]
 }
