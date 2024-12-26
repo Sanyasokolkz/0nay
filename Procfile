@@ -1,1 +1,1 @@
-worker: python onaybot.py
+web: python main.py
