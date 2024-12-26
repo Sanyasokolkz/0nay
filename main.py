@@ -4,8 +4,9 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from datetime import datetime
 from flask import Flask, request
 import logging
+import os
 
-TOKEN = '7885324267:AAHFISc1gkB7BCLXllYhFNG3bZIUeU9g4a0'
+TOKEN = os.getenv('TOKEN')
 FIXED_PRICE = '120₸'
 
 app = Flask(__name__)
